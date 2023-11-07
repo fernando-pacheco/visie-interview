@@ -1,0 +1,22 @@
+Visie Interview - Fernando Pacheco
+
+Para análise do projeto backend e frontend da criação e consumo da api em questão,
+segue os passos detalhados para a instalação das bibliotecas e funcionamento do código 
+caso haja algum problema com o ambiente virtual:
+
+----------------------------------------------
+pip install flask
+pip install flask_sqlalchemy
+pip install django
+pip install requests
+----------------------------------------------
+
+
+
+Para iniciar o projeto:
+
+----------------------------------------------
+.\venv\Scripts\activate -> para ativar o ambiente virtual
+python api.py
+python manage.py runserver
+----------------------------------------------
