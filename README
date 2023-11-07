@@ -1,4 +1,4 @@
-Visie Interview - Fernando Pacheco
+###Visie Interview - Fernando Pacheco
 
 Para análise do projeto backend e frontend da criação e consumo da api em questão,
 segue os passos detalhados para a instalação das bibliotecas e funcionamento do código 
@@ -19,4 +19,12 @@ Para iniciar o projeto:
 .\venv\Scripts\activate -> para ativar o ambiente virtual
 python api.py
 python manage.py runserver
+----------------------------------------------
+
+
+
+Web:
+
+----------------------------------------------
+localhost:8000/listar_pessoas para iniciar
 ----------------------------------------------
