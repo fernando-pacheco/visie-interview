@@ -1,0 +1,167 @@
+.layout-bg {
+  position: absolute;
+  top: calc(50% - 457.5px);
+  left: calc(50% - 926px);
+  border-radius: 71px;
+  background-color: var(--color-gainsboro);
+  width: 1849px;
+  height: 919px;
+}
+.edit-child,
+.edit-item {
+  cursor: pointer;
+  border: 2px solid var(--color-aqua);
+  padding: 0;
+  background-color: var(--color-dodgerblue-100);
+  position: absolute;
+  top: 64px;
+  left: 163px;
+  border-radius: var(--br-3xs);
+  box-sizing: border-box;
+  width: 196px;
+  height: 42px;
+  opacity: 0.7;
+  color: black;
+}
+.edit-item {
+  left: 713px;
+}
+.visualizador {
+  position: absolute;
+  top: 46px;
+  left: 1201px;
+  border-radius: 39px;
+  background-color: var(--color-gray-100);
+  width: 637px;
+  height: 857px;
+  mix-blend-mode: hard-light;
+}
+.edit-inner {
+  border: 0;
+  background-color: var(--color-gainsboro);
+  position: absolute;
+  top: 73px;
+  left: 1225px;
+  width: 592px;
+  height: 805px;
+}
+.cpf,
+.data-admissao,
+.data-nascimento,
+.funcao,
+.nome,
+.rg {
+  border: 0;
+  background-color: var(--color-gray-200);
+  position: absolute;
+  top: 352px;
+  left: 96px;
+  border-radius: var(--br-smi);
+  width: 424px;
+  height: 50px;
+}
+.cpf,
+.data-admissao,
+.data-nascimento,
+.funcao,
+.rg {
+  top: 488px;
+}
+.data-admissao,
+.data-nascimento,
+.funcao,
+.rg {
+  top: 624px;
+}
+.data-nascimento,
+.funcao,
+.rg {
+  top: 352px;
+  left: 637px;
+}
+.data-nascimento,
+.funcao {
+  top: 488px;
+}
+.funcao {
+  top: 624px;
+}
+.btn-delete,
+.btn-ok,
+.btn-update,
+.id {
+  border: 0;
+  position: absolute;
+  border-radius: var(--br-3xs);
+  height: 42px;
+}
+.btn-update {
+  cursor: pointer;
+  padding: 0;
+  background-color: rgba(164, 135, 34, 0.75);
+  top: 738px;
+  left: 96px;
+  width: 159px;
+}
+.btn-delete,
+.btn-ok,
+.id {
+  top: 246px;
+}
+.btn-ok {
+  cursor: pointer;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  left: 297px;
+  width: 49px;
+}
+.btn-delete,
+.id {
+  background-color: rgba(46, 172, 43, 0.75);
+  left: 96px;
+  width: 159px;
+}
+.btn-delete {
+  cursor: pointer;
+  padding: 0;
+  background-color: rgba(164, 34, 34, 0.75);
+  top: 738px;
+  left: 902px;
+}
+.edit {
+  position: relative;
+  background-color: var(--color-gray-100);
+  width: 100%;
+  height: 947px;
+  overflow: hidden;
+}
+
+.rectangle-div {
+  position: absolute;
+  top: 73px;
+  left: 1225px;
+  background-color: var(--color-gainsboro);
+  width: 592px;
+  height: 805px;
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+.table-container {
+  font-size: 14px;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th, .table-container td {
+  padding: 8px;
+  border: 1px solid #dddddd;
+  text-align: left;
+}
+
+.table-container th {
+  background-color: #f2f2f2;
+}

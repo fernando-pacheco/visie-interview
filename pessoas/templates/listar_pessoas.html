@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static "geral/css/global.css" %}" />
+    <link rel="stylesheet" href="{% static "geral/css/create_read.css" %}" />
+  </head>
+  <body>
+    <div class="createread">
+        <div class="layout-bg"></div>
+        <button class="createread-child" onclick="window.location.href = '{% url "listar_pessoas" %}'">CREATE</button>
+        <button class="createread-item" onclick="window.location.href = '{% url "editar_pessoas" %}'">EDIT</button>
+        
+    <div class="visualizador"></div>
+    <div class="rectangle-div table-container">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>RG</th>
+                <th>CPF</th>
+                <th>Data de Nascimento</th>
+                <th>Data de Admissão</th>
+                <th>Função</th>
+            </tr>
+            {% for pessoa in pessoas %}
+            <tr>
+                <td>{{ pessoa.id_pessoa }}</td>
+                <td>{{ pessoa.nome }}</td>
+                <td>{{ pessoa.rg }}</td>
+                <td>{{ pessoa.cpf }}</td>
+                <td>{{ pessoa.data_nascimento }}</td>
+                <td>{{ pessoa.data_admissao }}</td>
+                <td>{{ pessoa.funcao }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+        <form method="POST" action="{% url 'adicionar_pessoas' %}">
+            {% csrf_token %}
+            
+            <input class="nome" name="nome" placeholder="Nome" type="text" required /><br>
+
+            <input class="cpf" name="cpf" placeholder="CPF" type="text" required /><br>
+
+            <label class="data-admissao">Data de Admissão</label>
+            <input class="data-admissao" name="data_admissao" placeholder="Data de Admissão" type="date" required /><br>
+
+            <input class="rg" name="rg" placeholder="RG" type="text" required /><br>
+
+            <label class="data-nascimento">Data de Nascimento</label>
+            <input class="data-nascimento" name="data_nascimento" placeholder="Data de Nascimento" type="date" required /><br>
+
+            <input class="funcao" name="funcao" placeholder="Função" type="text" /><br>
+
+            <button class="rectangle-button" type="submit">Confirmar</button>
+        </form>
+    </div>
+  </body>
+</html>

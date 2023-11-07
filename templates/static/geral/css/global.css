@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  --color-gray-100: #242424;
+  --color-gray-200: rgba(36, 36, 36, 0.63);
+  --color-dodgerblue-100: #2982ea;
+  --color-gainsboro: #d9d9d9;
+  --color-aqua: #07f0ff;
+
+
+  --br-3xs: 10px;
+  --br-smi: 10px;
+}

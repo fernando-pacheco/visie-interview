@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static "geral/css/edit.css" %}" />
+    <link rel="stylesheet" href="{% static "geral/css/global.css" %}" />
+  </head>
+  <body>
+    <div class="edit">
+      <div class="layout-bg"></div>
+      <button class="edit-child" onclick="window.location.href = '{% url "listar_pessoas" %}'">CREATE</button>
+      <button class="edit-item" onclick="window.location.href = '{% url "editar_pessoas" %}'">EDIT</button>
+
+      <div class="visualizador"></div>
+      <div class="rectangle-div table-container">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>RG</th>
+                <th>CPF</th>
+                <th>Data de Nascimento</th>
+                <th>Data de Admissão</th>
+                <th>Função</th>
+            </tr>
+            {% for pessoa in pessoas %}
+            <tr>
+                <td>{{ pessoa.id_pessoa }}</td>
+                <td>{{ pessoa.nome }}</td>
+                <td>{{ pessoa.rg }}</td>
+                <td>{{ pessoa.cpf }}</td>
+                <td>{{ pessoa.data_nascimento }}</td>
+                <td>{{ pessoa.data_admissao }}</td>
+                <td>{{ pessoa.funcao }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+      </div>
+      <input class="id" placeholder="ID" type="text" id="id-input" />
+      <button class="btn-ok" onclick="redirectToUpdatePage()">OK</button>
+    </div>
+  </body>
+</html>
+
+<script>
+    function redirectToUpdatePage() {
+      const id = document.getElementById("id-input").value;
+  
+      if (id) {
+        window.location.href = `/atualizar_pessoas/${id}/`;
+      } else {
+        alert("Por favor, insira um ID válido.");
+      }
+    }
+  </script>
