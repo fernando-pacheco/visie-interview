@@ -39,11 +39,11 @@ def atualizar_pessoas(request, pessoa_id):
             response = requests.put(f'http://localhost:5000/pessoas/{pessoa_id}', json=data_atualizacao)
             
             if response.status_code == 200:
-                return render(request, 'atualizar_pessoas.html', {'pessoa':pessoa})
+                return redirect('listar_pessoas')
             else:
                 return HttpResponse('Falha na atualização', status=500)
 
-        return render(request, 'editar_pessoas.html', {'pessoa': pessoa})
+        return render(request, 'atualizar_pessoas.html', {'pessoa': pessoa})
     else:
         return HttpResponse('Pessoa não encontrada', status=404)
 

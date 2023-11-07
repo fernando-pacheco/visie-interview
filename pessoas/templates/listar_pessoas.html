@@ -43,19 +43,14 @@
         <form method="POST" action="{% url 'adicionar_pessoas' %}">
             {% csrf_token %}
             
-            <input class="nome" name="nome" placeholder="Nome" type="text" required /><br>
-
-            <input class="cpf" name="cpf" placeholder="CPF" type="text" required /><br>
-
+            <input class="nome" name="nome" placeholder="Nome" type="text" value="{{ pessoa.nome }}" /><br>
+            <input class="cpf" name="cpf" placeholder="CPF" type="text" value="{{ pessoa.cpf }}" /><br>
             <label class="data-admissao">Data de Admissão</label>
-            <input class="data-admissao" name="data_admissao" placeholder="Data de Admissão" type="date" required /><br>
-
-            <input class="rg" name="rg" placeholder="RG" type="text" required /><br>
-
+            <input class="data-admissao" name="data_admissao" placeholder="Data de Admissão" type="date" value="{{ pessoa.data_admissao }}" /><br>
+            <input class="rg" name="rg" placeholder="RG" type="text" value="{{ pessoa.rg }}" /><br>
             <label class="data-nascimento">Data de Nascimento</label>
-            <input class="data-nascimento" name="data_nascimento" placeholder="Data de Nascimento" type="date" required /><br>
-
-            <input class="funcao" name="funcao" placeholder="Função" type="text" /><br>
+            <input class="data-nascimento" name="data_nascimento" placeholder="Data de Nascimento" type="date" value="{{ pessoa.data_nascimento }}" /><br>
+            <input class="funcao" name="funcao" placeholder="Função" type="text" value="{{ pessoa.funcao }}" /><br>
 
             <button class="rectangle-button" type="submit">Confirmar</button>
         </form>
